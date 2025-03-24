@@ -1,0 +1,69 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-header {
+    border-bottom: none;
+}
+
+.poem-content {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+    padding: 10px;
+    background-color: #fffdf7;
+    border-radius: 5px;
+    border-left: 4px solid #0d6efd;
+}
+
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#result-container {
+    transition: all 0.5s ease;
+}
+
+.loading {
+    position: relative;
+    opacity: 0.7;
+}
+
+.loading::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 50 50"><circle cx="25" cy="25" r="20" fill="none" stroke="%230d6efd" stroke-width="5"><animate attributeName="stroke-dashoffset" dur="1.5s" repeatCount="indefinite" from="0" to="502"></animate><animate attributeName="stroke-dasharray" dur="1.5s" repeatCount="indefinite" values="150.6 100.4;1 250;150.6 100.4"></animate></circle></svg>') center no-repeat;
+    z-index: 2;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .card-header h1 {
+        font-size: 1.5rem;
+    }
+}
